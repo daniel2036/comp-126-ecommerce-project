@@ -1,0 +1,335 @@
+:root {
+  --color-primary: #a19164;
+  --color-secondary: #b3b6b7;
+  --color-accent: #611807;
+  --color-text: #2b2118;
+  --color-background-main: #fcfcf5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Tasa Explorer", sans-serif;
+  font-size: 14pt;
+  color: var(--color-text);
+  background-color: var(--color-background-main);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Orbitron", sans-serif;
+  color: var(--color-text);
+}
+
+h2 {
+  font-size: 24pt;
+}
+
+h3 {
+  font-size: 20pt;
+}
+
+header {
+  background-color: var(--color-primary);
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.nav-bar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.website-name {
+  font-family: "Orbitron", sans-serif;
+  font-size: 18pt;
+  color: var(--color-text);
+}
+
+.fixed-bottom-nav {
+  background-color: var(--color-primary);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 0;
+  z-index: 10;
+}
+
+.fixed-bottom-nav .nav-button {
+  text-decoration: none;
+  background-color: #d1b88e;
+  color: var(--color-text);
+  padding: 10px 0;
+  margin: 0 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+  font-size: 14pt;
+  font-weight: bold;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.fixed-bottom-nav .nav-button.active {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+main {
+  padding-top: 60px;
+  flex: 1;
+}
+
+.main-content-spacer {
+  height: 70px;
+}
+
+.product-grid-container {
+  padding: 20px 20px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100%;
+  height: 300px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-details {
+  padding: 15px;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 16pt;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.product-price {
+  font-family: "Orbitron", sans-serif;
+  color: var(--color-accent);
+  font-size: 14pt;
+}
+
+.learn-more {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 14pt;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.primary-button {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 16pt;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  transition: background-color 0.3s;
+}
+
+.primary-button:hover,
+.primary-button:focus {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+footer.desktop-footer {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 18pt;
+  }
+
+  h1 {
+    font-size: 50pt;
+  }
+
+  h2 {
+    font-size: 40pt;
+  }
+
+  h3 {
+    font-size: 28pt;
+  }
+
+  h4 {
+    font-size: 20pt;
+  }
+
+  header {
+    position: static;
+    padding: 15px 50px;
+  }
+
+  .nav-bar-top {
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .fixed-bottom-nav {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .desktop-nav .nav-button {
+    text-decoration: none;
+    background-color: #d1b88e;
+    color: var(--color-text);
+    padding: 10px 25px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-size: 18pt;
+    font-weight: bold;
+    display: inline-block;
+  }
+
+  .desktop-nav .nav-button:hover,
+  .desktop-nav .nav-button:focus,
+  .desktop-nav .nav-button.active {
+    background-color: var(--color-accent);
+    color: white;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .desktop-nav .desktop-cart-icon {
+    display: inline-block;
+    font-size: 24pt;
+    margin-left: 20px;
+    padding: 10px 15px;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    vertical-align: middle;
+  }
+
+  footer.desktop-footer {
+    background-color: var(--color-primary);
+    padding: 20px 50px;
+    margin-top: 50px;
+    display: block;
+    border-top: 2px solid var(--color-text);
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: "Orbitron", sans-serif;
+    font-size: 16pt;
+  }
+
+  .photo-credit {
+    max-width: 1200px;
+    margin: 10px auto 0;
+    font-family: "Tasa Explorer", sans-serif;
+    font-size: 10pt;
+    color: var(--color-text);
+    opacity: 0.75;
+    text-align: left;
+  }
+
+  .footer-content a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .product-grid-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding-top: 0;
+  }
+
+  .product-image {
+    height: 250px;
+  }
+
+  .content-box {
+    margin: 40px auto;
+    max-width: 900px;
+    padding: 40px;
+  }
+
+  .main-content-spacer {
+    display: none;
+  }
+
+  .contact-form-box {
+    max-width: 600px;
+  }
+
+  .footer-logo {
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+}
